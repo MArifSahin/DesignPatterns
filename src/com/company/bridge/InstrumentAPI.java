@@ -1,4 +1,4 @@
-// Implementor for bridgde pattern
+// Implementor for bridge pattern
 package com.company.bridge;
 
 public interface InstrumentAPI {
