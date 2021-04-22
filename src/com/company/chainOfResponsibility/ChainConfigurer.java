@@ -1,13 +1,13 @@
 package com.company.chainOfResponsibility;
 
 public class ChainConfigurer {
-    Handler chain;
+    Receiver chain;
 
     public ChainConfigurer(){
-        this.chain = new ConcreteHandlerA(new ConcreteHandlerB(new ConcreteHandlerC(null)));
+        this.chain = new Normalization(new FeatureSelection(new AlgorithmSelection(null)));
     }
 
-    public void handle(char message){
-        chain.handle(message);
+    public void handle(String message){
+        chain.receive(message);
     }
 }
